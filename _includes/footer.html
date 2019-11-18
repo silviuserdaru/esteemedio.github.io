@@ -1,0 +1,18 @@
+<div class="footer">
+  <div class="container w-clearfix">
+    {% for item in site.data.menus.navigation %}
+    {% if item.identifier %}
+    <div class="footer-column-left">
+      <h5 class="footer--heading">{{ item.title }}</h5>
+      {% for child in site.data.menus[item.identifier] %}
+      {% assign is_external = child.url | slice: 0, 4 %}
+      <a href="{{ child.url }}"{% if is_external == "http" %}target="_blank" {% endif %} class="footerlink">{{ child.title }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endfor %}
+    <div class="footerbottom w-clearfix">
+      <div class="footer--copyright">© 2019 Esteemed</div>
+    </div>
+  </div>
+</div>

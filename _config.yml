@@ -1,0 +1,15 @@
+title: "Esteemed.io"
+description: >-
+url: "https://www.esteemed.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-menus
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

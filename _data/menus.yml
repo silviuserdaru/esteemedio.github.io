@@ -1,0 +1,14 @@
+---
+navigation:
+- title: Platforms
+  url: "/platforms"
+  weight: 1
+- title: Services
+  url: "/services"
+  weight: 2
+- title: About
+  url: "/about"
+  weight: 3
+- title: Customers
+  url: "/customers"
+  weight: 4
