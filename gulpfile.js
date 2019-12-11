@@ -21,7 +21,7 @@ gulp.task('build', function(done) {
 
 gulp.task('sass', function() {
   // Compile SASS.
-  return gulp.src('./_css/creedo.scss')
+  return gulp.src('./_css/esteemed.scss')
     .pipe(sass({
       includePaths: [
         './_css',
@@ -31,7 +31,7 @@ gulp.task('sass', function() {
     })
     .on('error', sass.logError))
     .pipe(postcss([uncss({
-        csspath: '_site/css/creedo.css',
+        csspath: '_site/css/esteemed.css',
         html: [
           '_site/index.html',
           '_site/appointments.html',
@@ -50,9 +50,9 @@ gulp.task('js', function() {
   // Compile JS.
   return gulp.src([
     './node_modules/foundation-sites/dist/js/foundation.js',
-    './_js/creedo.js',
+    './_js/esteemed.js',
   ])
-    .pipe(concat('creedo.js'))
+    .pipe(concat('esteemed.js'))
     .pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(filelog());
