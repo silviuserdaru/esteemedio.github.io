@@ -1,28 +1,34 @@
 <div data-collapse="medium" data-animation="default" data-duration="400" class="hero-menu w-nav">
-  <a href="/" class="w-nav-brand w--current">
-    <img src="/img/logo.svg" alt="" class="logo" />
-  </a>
-  <nav role="navigation" class="nav-menu w-nav-menu">
-    {% for item in site.data.menus.navigation %}
-    {% if item.identifier %}
-    <div data-hover="1" data-delay="0" class="w-dropdown">
-      <div class="navlink w-dropdown-toggle">
-        <div>{{ item.title }}</div>
-        <div class="navlink-arrow w-icon-dropdown-toggle"></div>
-      </div>
-      <nav class="dropdown-list w-dropdown-list">
-        {% for child in site.data.menus[item.identifier] %}
-        {% assign is_external = child.url | slice: 0, 4 %}
-        <a href="{{ child.url }}"{% if is_external == "http" %}target="_blank" {% endif %} class="dropdown-link w-dropdown-link">{{ child.title }}</a>
+  <div class="grid-container">
+    <div class="grid-x align-middle">
+      <a href="/" class="w-nav-brand w--current cell medium-shrink">
+        <img src="/img/esteemed-logo.png" alt="" class="logo" />
+      </a>
+      <nav role="navigation" class="nav-menu w-nav-menu menu vertical medium-horizontal align-right cell medium-auto">
+        {% for item in site.data.menus.navigation %}
+        {% if item.identifier %}
+        <div data-hover="1" data-delay="0" class="w-dropdown">
+          <div class="navlink w-dropdown-toggle">
+            <div>{{ item.title }}</div>
+            <div class="navlink-arrow w-icon-dropdown-toggle"></div>
+          </div>
+          <nav class="dropdown-list w-dropdown-list">
+            {% for child in site.data.menus[item.identifier] %}
+            {% assign is_external = child.url | slice: 0, 4 %}
+            <a href="{{ child.url }}"{% if is_external == "http" %}target="_blank" {% endif %} class="dropdown-link w-dropdown-link">{{ child.title }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+        {% else %}
+        <a href="{{ item.url }}" class="navlink w-nav-link">{{ item.title }}</a>
+        {% endif %}
         {% endfor %}
+        <a href="#" class="button">Try Esteemed Enterprise</a>
+        <a href="#" class="button">Log In</a>
       </nav>
+      <div class="w-nav-button">
+        <div class="icon w-icon-nav-menu"></div>
+      </div>
     </div>
-    {% else %}
-    <a href="{{ item.url }}" class="navlink w-nav-link">{{ item.title }}</a>
-    {% endif %}
-    {% endfor %}
-  </nav>
-  <div class="w-nav-button">
-    <div class="icon w-icon-nav-menu"></div>
   </div>
 </div>

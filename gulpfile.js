@@ -30,6 +30,7 @@ gulp.task('sass', function() {
       //outputStyle: 'compressed'
     })
     .on('error', sass.logError))
+        /*
     .pipe(postcss([uncss({
         csspath: '_site/css/esteemed.css',
         html: [
@@ -38,6 +39,7 @@ gulp.task('sass', function() {
           '_site/barbers.html',
         ],
       }), cssnano()]))
+      */
     .pipe(gulp.dest('./css'))
     .pipe(filelog());
 });
