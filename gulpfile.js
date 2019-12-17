@@ -55,7 +55,7 @@ gulp.task('js', function() {
     './_js/esteemed.js',
   ])
     .pipe(concat('esteemed.js'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest('js'))
     .pipe(filelog());
 });
