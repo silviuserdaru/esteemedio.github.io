@@ -12,3 +12,43 @@ navigation:
 - title: Customers
   url: "/customers"
   weight: 4
+footer:
+- title: Communities
+  menu:
+  - title: wpcontractors.com
+    url: "www.wpcontractors.com"
+    weight: 1
+  - title: drupalcontractors.com
+    url: "www.drupalcontractors.com"
+    weight: 2
+- title: Services
+  menu:
+  - title: "Workforce Growth"
+    url: "#"
+    weight: 1
+  - title: "Agency Growth"
+    url: "#"
+    weight: 2
+- title: Company
+  menu:
+  - title: About
+    url: "/about"
+    weight: 1
+  - title: "Contact Us"
+    url: "/contact"
+    weight: 2
+  - title: Feedback
+    url: "/feedback"
+    weight: 3
+  - title: "Tweet @ Us"
+    url: "#"
+    weight: 4
+- title: Resources
+  menu:
+  - title: Community
+    url: "/community"
+    weight: 1
+  - title: Perspective
+    url: "/perspective"
+    weight: 2
+
