@@ -1,3 +1,18 @@
 .button {
   font-weight: $global-weight-bold;
 }
+
+.sup-head {
+  color: $blue--header;
+  font-weight: $global-weight-bold;
+  text-transform: uppercase;
+
+  &:after {
+    border-bottom: 2px solid $black;
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 100px;
+  }
+}

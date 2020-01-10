@@ -5210,6 +5210,18 @@ a.thumbnail {
 .button {
   font-weight: bold; }
 
+.sup-head {
+  color: #5b6bac;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .sup-head:after {
+    border-bottom: 2px solid #0a0a0a;
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 100px; }
+
 .icon {
   display: inline-block;
   vertical-align: text-bottom; }
