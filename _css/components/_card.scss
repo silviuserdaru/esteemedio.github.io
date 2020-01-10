@@ -1,0 +1,12 @@
+.simple-card {
+  margin: 0 auto;
+  max-width: 240px;
+
+  .simple-card__image {
+    margin-bottom: $double-spacing;
+
+    img {
+      height: 200px;
+    }
+  }
+}

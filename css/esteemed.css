@@ -5244,3 +5244,11 @@ a.thumbnail {
 
 .title-bar {
   justify-content: flex-end; }
+
+.simple-card {
+  margin: 0 auto;
+  max-width: 240px; }
+  .simple-card .simple-card__image {
+    margin-bottom: 2em; }
+    .simple-card .simple-card__image img {
+      height: 200px; }
