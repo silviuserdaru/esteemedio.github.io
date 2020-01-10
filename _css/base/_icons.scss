@@ -1,0 +1,15 @@
+.icon {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.stars-icon {
+  
+  &::before {
+    background: url('/img/stars-icon.png') no-repeat;
+    content: "";
+    display: block;
+    height: 32px;
+    width: 34px;
+  }
+}
