@@ -1,5 +1,9 @@
 .button {
   font-weight: $global-weight-bold;
+
+  &.orange {
+    background-color: $orange--btn;
+  }
 }
 
 .sup-head {
