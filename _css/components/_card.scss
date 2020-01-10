@@ -1,6 +1,10 @@
 .simple-card {
-  margin: 0 auto;
-  max-width: 240px;
+  margin: $double-spacing 0;
+
+  &--narrow {
+    margin: 0 auto;
+    max-width: 240px;
+  }
 
   .simple-card__image {
     margin-bottom: $double-spacing;
@@ -8,5 +12,15 @@
     img {
       height: 200px;
     }
+  }
+
+  .simple-card__icon {
+    height: 80px;
+    margin-bottom: $spacing;
+    text-align: center;
+  }
+
+  .simple-card__title {
+    margin-bottom: $spacing;
   }
 }

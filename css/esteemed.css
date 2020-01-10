@@ -5254,9 +5254,17 @@ a.thumbnail {
   justify-content: flex-end; }
 
 .simple-card {
-  margin: 0 auto;
-  max-width: 240px; }
+  margin: 2em 0; }
+  .simple-card--narrow {
+    margin: 0 auto;
+    max-width: 240px; }
   .simple-card .simple-card__image {
     margin-bottom: 2em; }
     .simple-card .simple-card__image img {
       height: 200px; }
+  .simple-card .simple-card__icon {
+    height: 80px;
+    margin-bottom: 1em;
+    text-align: center; }
+  .simple-card .simple-card__title {
+    margin-bottom: 1em; }
