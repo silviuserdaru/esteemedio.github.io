@@ -5224,6 +5224,19 @@ a.thumbnail {
     vertical-align: middle;
     width: 100px; }
 
+.quote {
+  margin-bottom: 1em; }
+  .quote::before {
+    content: "″";
+    display: block;
+    font-size: 4.375rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: -25px; }
+
+.company-logo {
+  margin-bottom: 1em; }
+
 .icon {
   display: inline-block;
   vertical-align: text-bottom; }
