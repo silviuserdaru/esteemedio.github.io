@@ -1,15 +1,15 @@
-<footer class="footer">
+<footer class="footer u-bg-gray">
   <div class="footertop">
     <div class="grid-container w-clearfix">
       <div class="grid-x">
         <div class="footertop__left cell medium-3">
-          <h1>esteemed</h1>
+          <h1 class="footer__logo">esteemed</h1>
         </div>
         <div class="footertop__right cell medium-9">
           <div class="grid-x">
             {% for item in site.data.menus.footer %}
               <div class="cell medium-3">
-                <h4>{{ item.title }}</h4>
+                <h5>{{ item.title }}</h5>
                 <ul class="menu vertical">
                   {% for menu in item.menu %}
                   <li><a href="{{ menu.url }}">{{ menu.title }}</a></li>

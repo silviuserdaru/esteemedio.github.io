@@ -5207,6 +5207,9 @@ a.thumbnail {
 .clearfix::after {
   clear: both; }
 
+a {
+  transition: all 0.3s ease-out; }
+
 .button {
   font-weight: bold; }
   .button.orange {
@@ -5263,8 +5266,29 @@ a.thumbnail {
 .u-bg-blue {
   background-color: #485aa3; }
 
+.u-bg-gray {
+  background-color: #dee3e8; }
+
 .title-bar {
   justify-content: flex-end; }
+
+.footer {
+  padding: 3.75rem 0; }
+  .footer .menu a {
+    color: #0a0a0a; }
+    .footer .menu a:hover {
+      color: #485aa3; }
+  @media print, screen and (min-width: 40em) {
+    .footer .menu a {
+      display: inline-block;
+      padding-left: 0; } }
+
+.footer__logo {
+  line-height: 1;
+  font-weight: bold; }
+
+.section {
+  padding: 3.75rem 0; }
 
 .simple-card {
   margin: 2em 0; }
