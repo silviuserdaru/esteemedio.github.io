@@ -5287,32 +5287,38 @@ a {
 
 .w-nav {
   padding: 1em 0; }
-
-.menu a:not(.button) {
-  color: #8a8a8a;
-  font-weight: bold; }
-
-@media print, screen and (min-width: 40em) {
-  .menu .button-group {
-    margin-bottom: 0; } }
-
-.menu .button {
-  padding: 1.5em 1.2em; }
+  .w-nav .menu a:not(.button) {
+    color: #8a8a8a;
+    font-weight: bold; }
+  @media print, screen and (min-width: 40em) {
+    .w-nav .menu .button-group {
+      margin-bottom: 0; } }
+  .w-nav .menu .button {
+    padding: 1.5em 1.2em; }
 
 .footer {
-  padding: 3.75rem 0; }
+  padding: 1.875rem 0; }
+  .footer .menu {
+    margin-bottom: 1em; }
   .footer .menu a {
     color: #0a0a0a; }
     .footer .menu a:hover {
       color: #485aa3; }
+  .footer .menu a {
+    padding-left: 0; }
   @media print, screen and (min-width: 40em) {
-    .footer .menu a {
-      display: inline-block;
-      padding-left: 0; } }
+    .footer {
+      padding: 3.75rem 0; }
+      .footer .menu a {
+        display: inline-block; } }
 
 .footer__logo {
-  line-height: 1;
-  font-weight: bold; }
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1; }
+
+.footertop__left {
+  margin-bottom: 1em; }
 
 .section {
   padding: 1.875rem; }

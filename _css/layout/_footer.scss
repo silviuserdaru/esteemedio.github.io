@@ -1,5 +1,9 @@
 .footer {
-  padding: $section-spacing 0;
+  padding: $small-section-spacing 0;
+
+  .menu {
+    margin-bottom: $spacing;
+  }
 
   .menu a {
     color: $black;
@@ -9,15 +13,24 @@
     }
   }
 
+  .menu a {
+    padding-left: 0;
+  }
+
   @include breakpoint(medium) {
+    padding: $section-spacing 0;
     .menu a {
       display: inline-block;
-      padding-left: 0;
     }
   }
 }
 
 .footer__logo {
-  line-height: 1;
+  font-size: rem-calc(40);
   font-weight: $global-weight-bold;
+  line-height: 1;
+}
+
+.footertop__left {
+  margin-bottom: $spacing;
 }

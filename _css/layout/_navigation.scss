@@ -4,22 +4,22 @@
 
 .w-nav {
   padding: $spacing 0;
-}
 
-.menu {
+  .menu {
 
-  a:not(.button) {
-    color: $dark-gray;
-    font-weight: $global-weight-bold;
-  }
-
-  .button-group {
-    @include breakpoint(medium) {
-      margin-bottom: 0;
+    a:not(.button) {
+      color: $dark-gray;
+      font-weight: $global-weight-bold;
     }
-  }
 
-  .button {
-    padding: $button-padding;
+    .button-group {
+      @include breakpoint(medium) {
+        margin-bottom: 0;
+      }
+    }
+
+    .button {
+      padding: $button-padding;
+    }
   }
 }
