@@ -27,11 +27,13 @@
             </nav>
           </div>
           {% else %}
-          <a href="{{ item.url }}" class="navlink w-nav-link">{{ item.title }}</a>
+          <a href="{{ item.url }}" class="navlink w-nav-link align-self-middle">{{ item.title }}</a>
           {% endif %}
           {% endfor %}
-          <a href="#" class="button">Try Esteemed Enterprise</a>
-          <a href="#" class="button">Log In</a>
+          <div class="button-group stacked-for-small">
+            <a href="#" class="button">Try Esteemed Enterprise</a>
+            <a href="#" class="button transparent">Log In</a>
+          </div>
         </nav>
       </div>
     </div>

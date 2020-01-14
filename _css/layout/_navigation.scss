@@ -1,3 +1,25 @@
 .title-bar {
   justify-content: flex-end;
 }
+
+.w-nav {
+  padding: $spacing 0;
+}
+
+.menu {
+
+  a:not(.button) {
+    color: $dark-gray;
+    font-weight: $global-weight-bold;
+  }
+
+  .button-group {
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  .button {
+    padding: $button-padding;
+  }
+}

@@ -1,3 +1,7 @@
 .section {
-  padding: $section-spacing 0;
+  padding: $small-section-spacing;
+
+  @include breakpoint(medium) {
+    padding: $section-spacing 0;
+  }
 }

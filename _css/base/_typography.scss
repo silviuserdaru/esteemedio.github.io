@@ -1,3 +1,7 @@
+.h5 {
+  margin-bottom: $spacing;
+}
+
 a {
   transition: all 0.3s ease-out;
 }
@@ -6,6 +10,12 @@ a {
 
   &.orange {
     background-color: $orange--btn;
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border: 2px solid $dark-gray;
+    color: $dark-gray;
   }
 }
 
