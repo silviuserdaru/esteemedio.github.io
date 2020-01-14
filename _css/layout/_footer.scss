@@ -34,3 +34,18 @@
 .footertop__left {
   margin-bottom: $spacing;
 }
+
+.footerbottom__social {
+  margin-bottom: $spacing;
+}
+
+.footerbottom__social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  width: 25px;
+}
+
+.footerbottom__copyright {
+  font-size: rem-calc(10);
+  font-weight: $global-weight-bold;
+}
