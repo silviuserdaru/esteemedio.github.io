@@ -1,17 +1,20 @@
-<div data-collapse="medium" data-animation="default" data-duration="400" class="hero-menu w-nav">
+<div data-collapse="large" data-animation="default" data-duration="400" class="hero-menu w-nav">
   <div class="grid-container">
     <div class="grid-x align-justify align-middle">
-      <div class="w-nav-brand w--current cell medium-shrink grid-x align-justify">
+      <div class="w-nav-brand w--current cell large-shrink grid-x align-justify">
         <a href="/" class="w-logo">
           <img src="/img/esteemed-logo.png" alt="" class="logo" />
         </a>
-        <div class="title-bar align-right" data-responsive-toggle="main-navigation" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle="main-navigation"></button>
+        <div class="title-bar align-right hide-for-large">
+          <button class="menu-icon" type="button" data-open="main-navigation"></button>
           <div class="title-bar-title"><span class="show-for-sr">Menu</span></div>
         </div>
       </div>
-      <div id="main-navigation">
-        <nav role="navigation" class="nav-menu w-nav-menu menu vertical medium-horizontal align-right cell medium-auto" data-dropdown-menu>
+      <div id="main-navigation" class="off-canvas position-right in-canvas-for-large" data-off-canvas>
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <nav role="navigation" class="nav-menu w-nav-menu menu vertical large-horizontal align-right cell large-auto" data-dropdown-menu>
           {% for item in site.data.menus.navigation %}
           {% if item.identifier %}
           <div data-hover="1" data-delay="0" class="w-dropdown">
