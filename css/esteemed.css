@@ -5296,6 +5296,13 @@ a {
   .w-nav .menu .button {
     padding: 1.5em 1.2em; }
 
+.w-nav-menu {
+  padding: 1em; }
+
+@media print, screen and (max-width: 74.99875em) {
+  .navlink {
+    align-self: auto; } }
+
 .footer {
   padding: 1.875rem 0; }
   .footer .menu {

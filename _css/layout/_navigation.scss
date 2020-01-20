@@ -23,3 +23,14 @@
     }
   }
 }
+
+.w-nav-menu {
+  padding: $spacing;
+}
+
+.navlink {
+  @include breakpoint(large down) {
+    align-self: auto;
+  }
+}
+
