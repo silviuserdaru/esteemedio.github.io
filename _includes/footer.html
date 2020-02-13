@@ -6,18 +6,6 @@
           <div class="footer__logo">esteemed</div>
         </div>
         <div class="footertop__right cell medium-9">
-          <div class="grid-x">
-            {% for item in site.data.menus.footer %}
-              <div class="cell medium-3">
-                <h5 class="u-text-bold">{{ item.title }}</h5>
-                <ul class="menu vertical">
-                  {% for menu in item.menu %}
-                  <li><a href="{{ menu.url }}">{{ menu.title }}</a></li>
-                  {% endfor %}
-                </ul>
-              </div>
-            {% endfor %}
-          </div>
         </div>
       </div>
       <div class="footerbottom w-clearfix">

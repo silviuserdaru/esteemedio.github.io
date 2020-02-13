@@ -5,39 +5,11 @@
         <a href="/" class="w-logo">
           <img src="/img/esteemed-logo.png" alt="" class="logo" />
         </a>
-        <div class="title-bar align-right hide-for-large">
-          <button class="menu-icon" type="button" data-open="main-navigation"></button>
-          <div class="title-bar-title"><span class="show-for-sr">Menu</span></div>
-        </div>
       </div>
       <div id="main-navigation" class="off-canvas position-right in-canvas-for-large" data-off-canvas>
         <button class="close-button" aria-label="Close menu" type="button" data-close>
           <span aria-hidden="true">&times;</span>
         </button>
-        <nav role="navigation" class="nav-menu w-nav-menu menu vertical large-horizontal align-right cell large-auto" data-dropdown-menu>
-          {% for item in site.data.menus.navigation %}
-          {% if item.identifier %}
-          <div data-hover="1" data-delay="0" class="w-dropdown">
-            <div class="navlink w-dropdown-toggle">
-              <div>{{ item.title }}</div>
-              <div class="navlink-arrow w-icon-dropdown-toggle"></div>
-            </div>
-            <nav class="dropdown-list w-dropdown-list">
-              {% for child in site.data.menus[item.identifier] %}
-              {% assign is_external = child.url | slice: 0, 4 %}
-              <a href="{{ child.url }}"{% if is_external == "http" %}target="_blank" {% endif %} class="dropdown-link w-dropdown-link">{{ child.title }}</a>
-              {% endfor %}
-            </nav>
-          </div>
-          {% else %}
-          <a href="{{ item.url }}" class="navlink w-nav-link align-self-middle">{{ item.title }}</a>
-          {% endif %}
-          {% endfor %}
-          <div class="button-group stacked-for-small">
-            <a href="#" class="button">Try Esteemed Enterprise</a>
-            <a href="#" class="button transparent">Log In</a>
-          </div>
-        </nav>
       </div>
     </div>
   </div>
