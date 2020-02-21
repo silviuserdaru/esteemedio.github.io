@@ -5,19 +5,10 @@ var filelog = require('gulp-filelog');
 var htmlmin = require('gulp-htmlmin');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
-var gutil = require('gulp-util');
-var sequence = require('run-sequence');
+var log = require('fancy-log');
 var postcss = require('gulp-postcss');
 var uncss = require('uncss').postcssPlugin;
 var cssnano = require('cssnano');
-
-gulp.task('default', function(done) {
-  sequence('sass', 'js', 'jekyll:serve', 'sass:watch', 'js:watch', done);
-});
-
-gulp.task('build', function(done) {
-  sequence('sass', 'js', 'jekyll', 'html-minify', done);
-});
 
 gulp.task('sass', function() {
   // Compile SASS.
@@ -73,31 +64,27 @@ gulp.task('html-minify', function() {
 gulp.task('jekyll', function(gulpCallback) {
   const jekyll = child.spawn('jekyll', ['build']);
 
-  const jekyllLogger = function(buffer) {
-    buffer.toString()
-      .split(/\n/)
-      .forEach(function(message) {
-        gutil.log('Jekyll: ' + message);
-      });
-  };
+  jekyll.stdout.on('data', logger('Jekyll', 'info'));
+  jekyll.stderr.on('data', logger('Jekyll', 'error'));
 
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
-
-  jekyll.on('exit', gulpCallback);
+  return jekyll;
 });
 
 gulp.task('jekyll:serve', function() {
   const jekyll = child.spawn('bundle', ['exec', 'jekyll', 'serve']);
 
-  const jekyllLogger = function(buffer) {
-    buffer.toString()
-      .split(/\n/)
-      .forEach(function(message) {
-        gutil.log('Jekyll: ' + message);
-      });
-  };
+  jekyll.stdout.on('data', logger('Jekyll', 'info'));
+  jekyll.stderr.on('data', logger('Jekyll', 'error'));
 
-  jekyll.stdout.on('data', jekyllLogger);
-  jekyll.stderr.on('data', jekyllLogger);
+  return jekyll;
 });
+
+var logger = (id, level) => buffer => {
+  buffer.toString()
+    .split(/\n/)
+    .forEach((message) => log[level](id + ': ' + message));
+};
+
+gulp.task('default', gulp.series('sass', 'js', 'jekyll:serve', 'sass:watch', 'js:watch'));
+
+gulp.task('build', gulp.series('sass', 'js', 'jekyll', 'html-minify'));
