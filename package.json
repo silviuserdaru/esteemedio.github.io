@@ -10,7 +10,6 @@
     "foundation-sites": "6.6.0",
     "gulp": "^4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-filelog": "^0.4.1",
     "gulp-htmlmin": "^3.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
