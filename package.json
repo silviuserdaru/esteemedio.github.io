@@ -10,10 +10,10 @@
     "foundation-sites": "^6.6.1",
     "gulp": "^4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "jquery": "3.4.1",
     "uncss": "^0.17.3",
     "what-input": "5.2.6"
