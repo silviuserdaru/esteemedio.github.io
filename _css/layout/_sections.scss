@@ -4,4 +4,20 @@
   @include breakpoint(medium) {
     padding: $section-spacing 0;
   }
+
+  &.texture--above {
+    padding-top: $section-spacing;
+
+    @include breakpoint(medium) {
+      padding-top: $lg-section-spacing;
+    }
+  }
+
+  &.texture--below {
+    padding-bottom: $section-spacing;
+
+    @include breakpoint(medium) {
+      padding-bottom: $lg-section-spacing;
+    }
+  }
 }

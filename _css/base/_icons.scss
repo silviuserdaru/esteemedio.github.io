@@ -13,3 +13,14 @@
     width: 34px;
   }
 }
+
+.stars-centered-icon {
+
+  &::before {
+    background: url('/img/stars-centered.svg') no-repeat;
+    content: "";
+    display: block;
+    height: 32px;
+    width: 34px;
+  }
+}
