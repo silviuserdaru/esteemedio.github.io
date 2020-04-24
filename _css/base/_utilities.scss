@@ -29,3 +29,20 @@
 .u-trailer {
   margin-bottom: $spacing;
 }
+
+@include breakpoint(medium) {
+  .main-title {
+    line-height: 1.2;
+    font-size: 4rem;
+    font-weight: $global-weight-bold;
+  }
+
+  .main-text-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
