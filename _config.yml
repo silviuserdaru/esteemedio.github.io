@@ -2,6 +2,8 @@ title: "Esteemed.io"
 description: >-
 url: "https://esteemed.io"
 email: service@esteemed.io
+meta:
+  image: "img/esteemed-main-meta.png"
 
 # Build settings
 markdown: kramdown

@@ -4,7 +4,7 @@
   <meta content="{{ page.meta.description }}" name="description" />
   <meta content="{{ page.title }} | Esteemed" property="og:title" />
   <meta content="{{ page.meta.description }}" property="og:description" />
-  <meta content="{{ page.meta.image }}" property="og:image" />
+  <meta content="{{ site.url }}/{% if page.meta.image %}{{ page.meta.image }}{% else %}{{ site.meta.image %}}{% endif %}" property="og:image" />
   <meta content="{{ site.url }}" property="og:url" />
   <meta content="summary" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
