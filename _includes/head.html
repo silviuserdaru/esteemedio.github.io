@@ -4,7 +4,11 @@
   <meta content="{{ page.meta.description }}" name="description" />
   <meta content="{{ page.title }} | Esteemed" property="og:title" />
   <meta content="{{ page.meta.description }}" property="og:description" />
-  <meta content="{{ site.url }}/img/{{ page.meta.image }}" property="og:image" />
+  {% if site.meta.image %}
+  <meta content="{{ site.url }}/{{ site.meta.image }}" property="og:image" />
+  {% else %}
+  <meta content="{{ site.url }}/{{ page.meta.image }}" property="og:image" />
+  {% endif %}
   <meta content="{{ site.url }}" property="og:url" />
   <meta content="summary" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
