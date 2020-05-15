@@ -24,3 +24,32 @@
     margin-bottom: $spacing;
   }
 }
+
+.our-value,
+.our-vision {
+  .simple-card {
+    .simple-card__image img {
+      height: 100px;
+      width: 100px;
+    }
+
+    p {
+      font-family: 'Lato', sans-serif;
+    }
+  }
+}
+
+.our-people {
+  h2 {
+    line-height: $section-spacing;
+  }
+}
+
+.image-cards .image-card {
+  padding: 10px 5px;
+
+  img {
+    height: 345px;
+    padding: 5px;
+  }
+}
