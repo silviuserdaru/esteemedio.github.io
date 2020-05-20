@@ -18,17 +18,9 @@ gulp.task('sass', function() {
         './node_modules/foundation-sites/scss',
         './node_modules/motion-ui/src',
       ],
-      //outputStyle: 'compressed'
+      outputStyle: 'compressed'
     })
     .on('error', sass.logError))
-    .pipe(postcss([uncss({
-        csspath: '_site/css/esteemed.css',
-        html: [
-          '_site/index.html',
-          '_site/appointments.html',
-          '_site/barbers.html',
-        ],
-      }), cssnano()]))
     .pipe(gulp.dest('./css'));
 });
 
