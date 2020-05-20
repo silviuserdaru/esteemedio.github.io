@@ -14,7 +14,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "motion-ui": "^2.0.3",
     "uncss": "^0.17.3",
     "what-input": "5.2.7"
