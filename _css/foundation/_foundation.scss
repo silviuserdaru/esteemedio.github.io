@@ -24,7 +24,7 @@
 // Behold, here are all the Foundation components.
 
 @import 'node_modules/foundation-sites/scss/foundation';
-//@import 'node_modules/motion-ui/src/motion-ui';
+@import 'node_modules/motion-ui/src/motion-ui';
 
 @include foundation-global-styles;
 
@@ -79,5 +79,5 @@
 @include foundation-float-classes;
 
 // Comment out if you don't want to use Foundation's Motion UI plugin
-//@include motion-ui-transitions;
-//@include motion-ui-animations;
+@include motion-ui-transitions;
+@include motion-ui-animations;

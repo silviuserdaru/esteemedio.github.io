@@ -16,6 +16,7 @@ gulp.task('sass', function() {
       includePaths: [
         './_css',
         './node_modules/foundation-sites/scss',
+        './node_modules/motion-ui/src',
       ],
       //outputStyle: 'compressed'
     })
@@ -39,6 +40,7 @@ gulp.task('js', function() {
   // Compile JS.
   return gulp.src([
     './node_modules/foundation-sites/dist/js/foundation.js',
+    './node_modules/motion-ui/motion-ui.js',
     './_js/esteemed.js',
   ])
     .pipe(concat('esteemed.js'))
