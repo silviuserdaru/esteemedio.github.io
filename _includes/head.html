@@ -28,4 +28,7 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {%- include analytics.html -%}
+  {% endif %}
 </head>
