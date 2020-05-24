@@ -4,6 +4,7 @@ url: "https://esteemed.io"
 email: service@esteemed.io
 meta:
   image: "img/esteemed-main-meta.png"
+google_analytics: UA-167435008-1
 
 # Build settings
 markdown: kramdown
