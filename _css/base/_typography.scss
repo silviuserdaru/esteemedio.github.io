@@ -1,3 +1,10 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: $global-weight-thin;
+}
+
 .h5 {
   margin-bottom: $spacing;
 }
@@ -6,7 +13,8 @@ a {
   transition: all 0.3s ease-out;
 }
 .button {
-  font-weight: $global-weight-bold;
+  font-family: $font-poppins;
+  font-weight: $global-weight-normal;
 
   &.orange {
     background-color: $orange--btn;

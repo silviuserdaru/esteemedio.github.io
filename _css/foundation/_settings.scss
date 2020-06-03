@@ -93,6 +93,7 @@ $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
+$global-weight-thin: 300;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 4px;
@@ -162,9 +163,9 @@ $header-styles: (
   ),
   medium: (
     'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
+    'h2': ('font-size': 35),
     'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h4': ('font-size': 28),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -300,7 +301,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 
 $button-font-family: inherit;
 $button-font-weight: null;
-$button-padding: 1.5em 1.2em;
+$button-padding: 1.4em 1.7em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $blue--btn;
@@ -313,7 +314,7 @@ $button-hollow-border-width: 1px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
-  default: 0.9rem,
+  default: 1.125rem,
   large: 1.25rem,
 );
 $button-palette: $foundation-palette;
