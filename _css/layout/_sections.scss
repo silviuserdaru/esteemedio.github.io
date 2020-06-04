@@ -1,3 +1,10 @@
+body {
+
+  @include breakpoint(large down) {
+    padding-top: 4.875rem;
+  }
+}
+
 .section {
   padding: $small-section-spacing;
 
