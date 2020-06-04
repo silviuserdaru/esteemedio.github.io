@@ -5,6 +5,33 @@
 .w-nav {
   padding: $spacing 0;
 
+  @include breakpoint(large down) {
+    background: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  > .grid-container {
+    position: relative;
+  }
+
+  .top-bar {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    .dropdown {
+      width: 100%;
+    }
+
+    &,
+    ul {
+      background: $white;
+    }
+  }
+
   .menu {
 
     a:not(.button) {
@@ -20,6 +47,78 @@
 
     .button {
       padding: $button-padding;
+    }
+  }
+
+  #main-navigation {
+
+    &__button {
+
+      button {
+        transition: .3s;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover:after,
+        &:focus:after,
+        &:after {
+          background: $black;
+          box-shadow: 0 7px 0 $black, 0 14px 0 $black;
+        }
+
+        &[aria-expanded='true'] {
+
+          &:after {
+            background: $blue--btn;
+            box-shadow: 0 7px 0 $blue--btn, 0 14px 0 $blue--btn;
+          }
+        }
+      }
+    }
+
+    &__content {
+
+      @include breakpoint(large down) {
+        box-shadow: 0 4px 5px -2px $light-gray;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        width: 100%;
+      }
+
+      li {
+        font-family: $font-poppins;
+
+        @include breakpoint(large down) {
+          border-top: 1px solid $light-gray;
+        }
+
+        a {
+          color: $black;
+          font-size: 1.25rem;
+          font-weight: $global-weight-normal;
+          padding: 30px 10px;
+
+          &:hover {
+            color: $blue--btn;
+          }
+        }
+      }
+
+      button {
+        font-weight: $global-weight-normal;
+
+        @include breakpoint(large down) {
+          margin: 20px auto;
+        }
+
+        @include breakpoint(small only) {
+          width: calc(100% - 20px);
+        }
+      }
     }
   }
 }
