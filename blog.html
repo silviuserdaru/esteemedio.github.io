@@ -1,0 +1,18 @@
+---
+title: Blogs
+permalink: /blogs/
+---
+
+<div class="grid-container">
+  <div class="grid-x align-top">
+    <h1>Blog</h1>
+    {% for post in site.posts %}
+    <div class="cell" style="background:#efefef; margin: 10px 0; padding: 10px">
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <address class="author">{{ post.author }}</address>
+      {{ post.excerpt | strip_html }}
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</div>
