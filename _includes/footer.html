@@ -1,26 +1,39 @@
 <footer class="footer u-bg-gray">
   <div class="footertop">
     <div class="grid-container w-clearfix">
-      <div class="grid-x">
-        <div class="footertop__left cell medium-3">
-          <div class="footer__logo">
-            <a href="/" class="w-logo">
-              <img src="/img/esteemed-logo-color.png" alt="" class="logo" />
-            </a>
+      <div class="footertop">
+        <div class="footer__logo">
+          <a href="/" class="w-logo">
+            <img src="/img/esteemed-logo-color.png" alt="" class="logo" />
+          </a>
+        </div>
+      </div>
+      <div class="grid-x footerbottom w-clearfix">
+        <div class="footerbottom__first cell small-6 large-3">
+          <div class="footerbottom__first--content">
+            <h6>About</h6>
+            <ul>
+              <li><a href="/company">Company</a></li>
+              <li><a class="mail" href="mailto:press@esteemed.io">press@esteemed.io</a></li>
+            </ul>
+          </div>
+          <div class="footerbottom__social">
+            <a href="https://www.facebook.com/Esteemed-106526290944059/" class="footerbottom__social-icon"><img src="/img/facebook.svg"><span class="show-for-sr">Facebook</span></a>
+            <a href="https://twitter.com/EsteemedTalent" class="footerbottom__social-icon"><img src="/img/twitter.svg"><span class="show-for-sr">Twitter</span></a>
+            <a href="https://www.linkedin.com/company/esteemed/" class="footerbottom__social-icon"><img src="/img/linkedin.svg"><span class="show-for-sr">Linkedin</span></a>
+            <a href="mailto:{{ site.email }}" class="footerbottom__social-icon" target="_blank"><img src="/img/email.svg"><span class="show-for-sr">Email</span></a>
           </div>
         </div>
-        <div class="footertop__right cell medium-9">
+        <div class="footerbottom__second cell small-6 large-3">
+          <h6>Support</h6>
+          <p><a class="mail" href="mailto:support@esteemed.io">support@esteemed.io</a></p>
+        </div>
+        <div class="footerbottom__third cell small-6 large-3">
+        </div>
+        <div class="footerbottom__forth cell small-6 large-3">
         </div>
       </div>
-      <div class="footerbottom w-clearfix">
-        <div class="footerbottom__social">
-          <a href="https://www.facebook.com/Esteemed-106526290944059/" class="footerbottom__social-icon"><img src="/img/facebook.svg"><span class="show-for-sr">Facebook</span></a>
-          <a href="https://twitter.com/EsteemedTalent" class="footerbottom__social-icon"><img src="/img/twitter.svg"><span class="show-for-sr">Twitter</span></a>
-          <a href="https://www.linkedin.com/company/esteemed/" class="footerbottom__social-icon"><img src="/img/linkedin.svg"><span class="show-for-sr">Linkedin</span></a>
-          <a href="mailto:{{ site.email }}" class="footerbottom__social-icon" target="_blank"><img src="/img/email.svg"><span class="show-for-sr">Email</span></a>
-        </div>
-        <div class="footerbottom__copyright">Copyright&copy; {{ "now" | date: "%Y" }} Esteemed. <a href="/privacy-policy">Privacy</a> | <a href="/terms-use">Terms</a></div>
-      </div>
+      <div class="footer__copyright">Copyright&copy; {{ "now" | date: "%Y" }} Esteemed. <a href="/privacy-policy">Privacy</a> | <a href="/terms-use">Terms</a></div>
     </div>
   </div>
 </footer>

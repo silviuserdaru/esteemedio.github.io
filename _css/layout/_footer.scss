@@ -1,6 +1,34 @@
 .footer {
   padding: $small-section-spacing 0;
 
+  h6 {
+    font-weight: $global-weight-bold;
+  }
+
+  p,
+  a {
+    color: $black;
+    font-family: $font-lato;
+    font-size: 0.875rem;
+    font-weight: $global-weight-medium;
+  }
+
+  a {
+
+    &:hover {
+      color: $blue--bg;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 1rem 0;
+
+    li {
+      margin-bottom: 0.3125rem;
+    }
+  }
+
   .menu {
     margin-bottom: $spacing;
   }
@@ -23,29 +51,57 @@
       display: inline-block;
     }
   }
-}
 
-.footer__logo {
-  font-size: rem-calc(40);
-  font-weight: $global-weight-bold;
-  line-height: 1;
+  &__logo {
+    font-size: rem-calc(40);
+    font-weight: $global-weight-bold;
+    line-height: 1;
+    margin-bottom: 1.8rem;
+  }
+
+  &__copyright {
+    margin-top: 4rem;
+
+    @include breakpoint(medium down) {
+      margin-top: 1rem;
+    }
+
+    &,
+    a {
+      color: $dark-gray;
+      font-size: rem-calc(10);
+      font-weight: $global-weight-bold;
+    }
+
+    a {
+
+      &:hover {
+        color: $blue--bg;
+      }
+    }
+  }
 }
 
 .footertop__left {
   margin-bottom: $spacing;
 }
 
-.footerbottom__social {
-  margin-bottom: $spacing;
-}
+.footerbottom {
 
-.footerbottom__social-icon {
-  display: inline-block;
-  margin: 0 10px;
-  width: 25px;
-}
+  &__social {
+    margin-left: -0.375rem;
+    margin-right: -0.375rem;
+    margin-bottom: $spacing;
 
-.footerbottom__copyright {
-  font-size: rem-calc(10);
-  font-weight: $global-weight-bold;
+    &-icon {
+      display: inline-block;
+      margin: 0 0.375rem;
+      transition: .3s;
+      width: 1.125rem;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
 }

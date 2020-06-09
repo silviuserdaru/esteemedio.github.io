@@ -11,6 +11,14 @@ h4 {
 
 a {
   transition: all 0.3s ease-out;
+
+  &.mail {
+    color: $black;
+
+    &:hover {
+      color: $blue--bg;
+    }
+  }
 }
 .button {
   font-family: $font-poppins;
