@@ -1,6 +1,6 @@
 body {
 
-  @include breakpoint(large down) {
+  @include breakpoint(medium down) {
     padding-top: 4.875rem;
   }
 }

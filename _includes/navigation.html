@@ -6,24 +6,34 @@
           <img src="/img/esteemed-bw-logo.png" alt="" class="logo">
         </a>
       </div>
-      <div id="main-navigation__button" class="hide-for-large">
+      <div id="main-navigation__button">
         <div class="title-bar" data-toggle="main-navigation" data-responsive-toggle="main-navigation" data-hide-for="large">
           <button class="menu-icon" type="button" data-toggle="main-navigation"></button>
         </div>
       </div>
     </div>
-    <div class="grid-x hide-for-large" id="main-navigation__content">
+    <div class="grid-x" id="main-navigation__content">
       <div class="top-bar cell" id="main-navigation" data-toggler data-animate="fade-in fade-out">
         <ul class="dropdown vertical large-horizontal menu" data-dropdown-menu>
-          <li>
-            <a href="/company">Company</a>
-          </li>
-          <li>
-            <a href="/">Help</a>
-          </li>
-          <li>
-            <button class="button">Get Started Now</button>
-          </li>
+
+          {% for nav in site.data.menus.navigation %}
+
+            {% if nav.button != 0 %} 
+              {% assign class = "button" %}
+            {% endif %}
+
+            {% if class %}
+              {% assign class = class | append: " " %}
+            {% endif %}
+
+            {% if nav.url == page.url %}
+              {% assign class = class | append: "is-active" %}
+            {% endif %}
+
+            <li>
+              <a {% if class %} class="{{ class }}"{% endif %} href="{{ nav.url }}">{{ nav.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
