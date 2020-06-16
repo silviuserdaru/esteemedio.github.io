@@ -28,3 +28,37 @@ body {
     }
   }
 }
+
+.blog-post {
+
+  h1 {
+    font-weight: $global-weight-semi-bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .author {
+    text-align: center;
+
+    span {
+      color: $blue--bg;
+      font-weight: $global-weight-bold;
+    }
+  }
+
+  &__date {
+    text-align: center;
+  }
+
+  &__content {
+    color: $black;
+    margin-top: 2rem;
+
+    &,
+    * {
+      font-family: $font-lato;
+      font-size: 1.125rem;
+      line-height: 2.1;
+    }
+  }
+}
