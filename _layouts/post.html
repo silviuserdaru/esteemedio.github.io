@@ -13,6 +13,19 @@ layout: default
         <img src="/img/{{ page.image }}">
         {{ page.content | markdownify }}
       </div>
+
+      <div class="post-categories">
+        {% if post %}
+          {% assign categories = post.categories %}
+        {% else %}
+          {% assign categories = page.categories %}
+        {% endif %}
+        {% for category in categories %}
+        <a href="{{site.baseurl}}/blogs/category/{{category|slugize|downcase}}">{{category}}</a>
+        {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+      </div>
+
       <div class="blog-post__author-block">
         <div class="grid-x align-center-middle">
           <div class="blog-post__author-block--container grid-x cell large-8">
