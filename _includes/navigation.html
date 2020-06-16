@@ -12,18 +12,14 @@
         </div>
       </div>
     </div>
-    <div class="grid-x hide-for-large" id="main-navigation__content">
+    <div class="grid-x" id="main-navigation__content">
       <div class="top-bar cell" id="main-navigation" data-toggler data-animate="fade-in fade-out">
         <ul class="dropdown vertical large-horizontal menu" data-dropdown-menu>
-          <li>
-            <a href="/company">Company</a>
-          </li>
-          <li>
-            <a href="/">Help</a>
-          </li>
-          <li>
-            <button class="button">Get Started Now</button>
-          </li>
+          {% for nav in site.data.menus.navigation %}
+            <li>
+              <a class="{% if nav.button != 0 %}button {% endif %}{% if nav.url == page.url %} is-active{% endif %}" href="{{ nav.url }}">{{ nav.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>

@@ -5,7 +5,7 @@
 .w-nav {
   padding: $spacing 0;
 
-  @include breakpoint(large down) {
+  @include breakpoint(medium down) {
     background: $white;
     left: 0;
     position: fixed;
@@ -15,6 +15,11 @@
 
   > .grid-container {
     position: relative;
+
+    @include breakpoint(large up) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .top-bar {
@@ -24,6 +29,10 @@
 
     .dropdown {
       width: 100%;
+
+      @include breakpoint(large up) {
+        align-items: center;
+      }
     }
 
     &,
@@ -47,6 +56,10 @@
 
     .button {
       padding: $button-padding;
+
+      @include breakpoint(large up) {
+        padding: $button-padding-small;
+      }
     }
   }
 
@@ -80,7 +93,7 @@
 
     &__content {
 
-      @include breakpoint(large down) {
+      @include breakpoint(medium down) {
         box-shadow: 0 4px 5px -2px $light-gray;
         left: 0;
         position: absolute;
@@ -92,7 +105,7 @@
       li {
         font-family: $font-poppins;
 
-        @include breakpoint(large down) {
+        @include breakpoint(medium down) {
           border-top: 1px solid $light-gray;
         }
 
@@ -100,18 +113,63 @@
           color: $black;
           font-size: 1.25rem;
           font-weight: $global-weight-normal;
-          padding: 30px 10px;
+
+          @include breakpoint(medium down) {
+            padding: 30px 10px;
+          }
+
+          @include breakpoint(large up) {
+            font-size: 1.125rem;
+            font-weight: $global-weight-medium;
+          }
 
           &:hover {
             color: $blue--btn;
           }
+
+          &.button {
+            color: $white;
+
+            @include breakpoint(medium down) {
+              padding: $button-padding;
+            }
+          }
+
+          &:not(.button).is-active {
+
+            @include breakpoint(medium down) {
+              color: $blue--bg;
+            }
+
+            @include breakpoint(large up) {
+              margin-bottom: -7px;
+            }
+
+            &:after {
+
+              @include breakpoint(large up) {
+                background: $blue--bg;
+                content: "";
+                display: block;
+                height: 0.125rem;
+                margin: 0.3125rem -0.1875rem 0 -0.1875rem;
+                width: calc(100% + 0.375rem);
+              }
+            }
+          }
         }
       }
 
+      li a.button,
       button {
         font-weight: $global-weight-normal;
 
-        @include breakpoint(large down) {
+        @include breakpoint(medium up) {
+          display: inline-block;
+          margin-left: 3.5rem;
+        }
+
+        @include breakpoint(medium down) {
           margin: 20px auto;
         }
 

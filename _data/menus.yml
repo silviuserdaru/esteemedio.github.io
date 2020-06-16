@@ -1,17 +1,13 @@
 ---
 navigation:
-- title: Platforms
-  url: "/platforms"
+- button: 0
+  title: Company
+  url: "/company/"
   weight: 1
-- title: Services
-  url: "/services"
+- button: 1
+  title: Get Support
+  url: "mailto:support@esteemed.io"
   weight: 2
-- title: About
-  url: "/about"
-  weight: 3
-- title: Customers
-  url: "/customers"
-  weight: 4
 footer:
 - title: Communities
   menu:
