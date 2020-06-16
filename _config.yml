@@ -36,3 +36,4 @@ defaults:
     values:
       permalink: "/blogs/author/:title/"
       layout: authors
+      image: /img/profile-pic.png
