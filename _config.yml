@@ -12,6 +12,11 @@ plugins:
   - jekyll-menus
   - jekyll-sitemap
 
+collections:
+  authors:
+    title: Authors
+    output: true
+
 defaults:
   -
     scope:
@@ -24,3 +29,10 @@ defaults:
     values:
       layout: "post"
       permalink: /blog/:year/:month/:day/:title/
+  -
+    scope:
+      path: ''
+      type: authors
+    values:
+      permalink: "/blogs/author/:title/"
+      layout: authors
