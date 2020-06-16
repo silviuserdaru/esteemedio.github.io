@@ -3,6 +3,21 @@ layout: default
 ---
 
 {% assign author = site.authors | where: 'slug', page.author | first %}
+
+{% if post %}
+  {% assign categories = post.categories %}
+{% else %}
+  {% assign categories = page.categories %}
+{% endif %}
+
+<div class="grid-container breadcrumb">
+  <a href="/blogs">Blog</a>
+  {% if categories %}
+    <span class="breadcrumb--chevron">></span>
+    <a href="{{site.baseurl}}/blogs/category/{{categories[0]|slugize|downcase}}">{{categories[0]}}</a>
+  {% endif %} 
+</div>
+
 <div class="grid-container blog-post">
   <div class="grid-x align-top">
     <div class="cell">
@@ -10,20 +25,20 @@ layout: default
       <address class="blog-post__author">By <span><a href="{{ author.url }}">{{ author.title }}</a></span></address>
       <div class="blog-post__date">{{ page.date | date: "%m.%-d.%Y" }}</div>
       <div class="blog-post__content">
-        <img src="/img/{{ page.image }}">
+        <div class="blog-post__content--image">
+          <img src="/img/{{ page.image }}">
+        </div>
         {{ page.content | markdownify }}
       </div>
 
-      <div class="post-categories">
-        {% if post %}
-          {% assign categories = post.categories %}
-        {% else %}
-          {% assign categories = page.categories %}
-        {% endif %}
-        {% for category in categories %}
-        <a href="{{site.baseurl}}/blogs/category/{{category|slugize|downcase}}">{{category}}</a>
-        {% unless forloop.last %}&nbsp;{% endunless %}
-        {% endfor %}
+      <div class="post-categories grid-x align-center-middle">
+        <div class="cell large-8">
+          <span class="post-categories--title">Categories: </span>
+          {% for category in categories %}
+          <a href="{{site.baseurl}}/blogs/category/{{category|slugize|downcase}}">{{category}}</a>
+          {% unless forloop.last %}<span class="space-between">,</span>{% endunless %}
+          {% endfor %}
+        </div>
       </div>
 
       <div class="blog-post__author-block">
