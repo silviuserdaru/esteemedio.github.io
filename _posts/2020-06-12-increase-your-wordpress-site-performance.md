@@ -1,6 +1,6 @@
 ---
 title: How To Increase Your WordPress Site’s Performance
-author: Matthew Pritchard
+author: matthew-pritchard
 ---
 
 Advancing your website’s speed is the ultimate goal of any WordPress user. Ideally, your intended users are able browse your website, and benefit from fast page-loading. Though various factors determine your WordPress website’s speed, things like web hosting and SEO play a critical role. Accelerating your WordPress website is important as it influences how users interact with your digital presence. So important, in fact, that over 53% of users leave websites that take [more than three seconds to load](https://www.marketingdive.com/news/google-53-of-mobile-users-abandon-sites-that-take-over-3-seconds-to-load/426070/).   
