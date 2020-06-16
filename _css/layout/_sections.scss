@@ -28,3 +28,96 @@ body {
     }
   }
 }
+
+.blog-post {
+  font-family: $font-lato;
+  margin-top: 2rem;
+
+  h1 {
+    font-weight: $global-weight-semi-bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__author {
+    text-align: center;
+
+    span {
+      color: $blue--bg;
+      font-weight: $global-weight-bold;
+    }
+  }
+
+  &__date {
+    text-align: center;
+  }
+
+  &__content {
+    color: $black;
+    margin-top: 2rem;
+
+    &--image {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &,
+    * {
+      font-size: 1.125rem;
+      line-height: 2.1;
+    }
+  }
+
+  .post-categories {
+    font-size: 1.125rem;
+    font-weight: $global-weight-thin;
+    margin-top: 3rem;
+
+    .space-between {
+      margin-left: -0.25rem;
+    }
+  }
+
+  &__author-block {
+    font-family: $font-lato;
+
+    &--container {
+      align-items: flex-end;
+      border-top: 4px solid $blue--bg;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      padding-top: 2.5rem;
+
+      @include breakpoint(small only) {
+        margin-top: 1rem;
+        padding-top: 2rem;
+      }
+    }
+
+    &--image {
+
+      @include breakpoint(small only) {
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+
+      @include breakpoint(medium up) {
+        padding-right: 1rem;
+      }
+    }
+
+    &--name {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+
+      @include breakpoint(small only) {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+
+    &--bio {
+      font-size: 1.125rem;
+    }
+  }
+}

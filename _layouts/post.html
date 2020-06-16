@@ -3,12 +3,61 @@ layout: default
 ---
 
 {% assign author = site.authors | where: 'slug', page.author | first %}
-<div class="grid-container">
+{% assign categories = site.categories | where: 'categories', page.categories %}
+
+<div class="grid-container breadcrumb">
+  <a href="/blogs/">Blog</a>
+  {% if categories %}
+  {% assign breadcrumb = categories | first %}
+  <span class="breadcrumb--chevron">></span>
+  <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+  {% endif %}
+</div>
+
+<div class="grid-container blog-post">
   <div class="grid-x align-top">
     <div class="cell">
       <h1>{{ page.title }}</h1>
-      <address class="author"><a href="{{ author.url }}">{{ author.title }}</a></address>
-      {{ page.content | markdownify }}
+      <address class="blog-post__author">By <span><a href="{{ author.url }}">{{ author.title }}</a></span></address>
+      <div class="blog-post__date">{{ page.date | date: "%m.%-d.%Y" }}</div>
+      <div class="blog-post__content">
+        {% if page.image %}
+        <div class="blog-post__content--image">
+          <img src="{{ page.image }}">
+        </div>
+        {% endif %}
+        {{ page.content | markdownify }}
+      </div>
+
+      <div class="post-categories grid-x align-center-middle">
+        <div class="cell large-8">
+          <span class="post-categories--title">Categories: </span>
+          {% for category in categories %}
+          <a href="{{ category.url }}">{{ category.title }}</a>
+          {% unless forloop.last %}<span class="space-between">,</span>{% endunless %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="blog-post__author-block">
+        <div class="grid-x align-center-middle">
+          <div class="blog-post__author-block--container grid-x cell large-8">
+            <div class="cell medium-3">
+              <div class="blog-post__author-block--image">
+                <a href="{{ author.url }}"><img src="{{ author.image }}"></a>
+              </div>
+            </div>
+            <div class="cell medium-9">
+              <div class="blog-post__author-block--name">
+                <a href="{{ author.url }}">{{ author.title }}</a>
+              </div>
+              <div class="blog-post__author-block--bio">
+                {{ author.content }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
