@@ -10,6 +10,7 @@ google_analytics: UA-167435008-1
 markdown: kramdown
 plugins:
   - jekyll-menus
+  - jekyll-sitemap
 
 defaults:
   -
