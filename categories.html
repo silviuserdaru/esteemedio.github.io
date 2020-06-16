@@ -6,9 +6,8 @@ title: Categories
 
 <div id="blog-categories">
 {% for category in site.categories %}
-  <h3 class="category-head">{{ category.title }}</h3>
-  <h3 class="category-description">{{ category.content }}</h3>
-  <a name="{{ category_name | slugize }}"></a>
+  <a href="{{ category.url }}" class="category-head">{{ category.title }}</a>
+
   {% for post in site.categories[category.title] %}
   <article class="archive-item">
     <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
