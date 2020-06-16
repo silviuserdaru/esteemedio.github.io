@@ -1,0 +1,20 @@
+---
+title: Categories
+permalink: /blogs/categories/
+---
+
+<div class="grid-container">
+  <div class="grid-x align-top">
+    <div class="cell">
+      {% for category in site.categories %}
+      {% assign posts = site.posts | where: 'categories', category.slug %}
+      <h2><a href="{{ category.url }}" class="category-head">{{ category.title }}</a></h2>
+      {% for post in posts %}
+      <article class="archive-item">
+        <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+      </article>
+      {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

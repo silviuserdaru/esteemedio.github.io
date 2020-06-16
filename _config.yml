@@ -16,6 +16,9 @@ collections:
   authors:
     title: Authors
     output: true
+  categories:
+    title: Categories
+    output: true
 
 defaults:
   -
@@ -37,3 +40,10 @@ defaults:
       permalink: "/blogs/author/:title/"
       layout: authors
       image: /img/profile-pic.png
+  -
+    scope:
+      path: ''
+      type: categories
+    values:
+      permalink: "/blogs/category/:title/"
+      layout: categories
