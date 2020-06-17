@@ -5,7 +5,8 @@ layout: default
 {% assign posts = site.posts | where:'author', page.slug %}
 <div class="grid-container">
   <div class="grid-x align-top">
-    <h1>{{ page.title }}'s Posts</h1>
+    <h1><img src="{{ page.image }}" />{{ page.title }}'s Posts</h1>
+    <p>{{ page.content }}</p>
     {% for post in posts %}
     <div class="cell" style="background:#efefef; margin: 10px 0; padding: 10px">
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>

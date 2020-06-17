@@ -10,6 +10,15 @@ google_analytics: UA-167435008-1
 markdown: kramdown
 plugins:
   - jekyll-menus
+  - jekyll-sitemap
+
+collections:
+  authors:
+    title: Authors
+    output: true
+  categories:
+    title: Categories
+    output: true
 
 collections:
   authors:
